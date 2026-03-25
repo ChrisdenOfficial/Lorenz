@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chrisden Cristobal — Portfolio</title>
+  <meta name="description" content="Portfolio of Chrisden Cristobal: projects, experience, and contact information." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient background layers -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__gradient"></div>
+    <canvas id="bgParticles"></canvas>
+    <div class="bg__grid"></div>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Chrisden home">Chrisden<span>.</span></a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#setup">Setup</a></li>
+        <li><a class="nav-link" href="#projects">Work Project</a></li>
+        <li><a class="nav-link" href="#tips">Tips</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="fx-toggle" id="fxToggle" aria-pressed="true" title="Toggle background effects">✨</button>
+  </header>
+
+  <main id="home" class="home section">
+    <div class="container hero">
+      <div class="hero__text">
+        <p class="eyebrow">Hello, I’m</p>
+        <h1>Chrisden Cristobal</h1>
+        <p class="tagline">Client Services • Driven by useful, human‑centered solutions</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="#projects">Work Project</a>
+          <a class="btn btn--ghost" href="#contact">Contact Me</a>
+
+          <!-- Resume button with menu (View Online removed) -->
+          <div class="menu-btn">
+            <button class="btn btn--ghost" id="resumeBtn" aria-haspopup="true" aria-expanded="false">
+              Download Resume
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 20 20" style="margin-left:8px">
+                <path fill="currentColor" d="M5.5 7l4.5 4.5L14.5 7h-9z"/>
+              </svg>
+            </button>
+            <div class="menu" role="menu" aria-labelledby="resumeBtn">
+              <a role="menuitem" id="downloadResume" href="assets/resume/Chrisden_Cristobal_Resume.docx" download>Download .DOCX</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="images/ChrisPhoto.jpg" alt="Portrait of Chrisden Cristobal" loading="eager" />
+      </div>
+    </div>
+  </main>
+
+  <section id="about" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>About</h2>
+        <p>
+          I’m a Client Services professional who enjoys turning ideas into simple, effective experiences. I focus on clear communication, dependable delivery, and continuous improvement. Outside work, I explore new tools, improve workflows, and study how things work and learn from all experiences.
+        </p>
+      </div>
+      <div class="card tilt">
+        <h3>Quick facts about me</h3>
+        <ul class="facts">
+          <li>Location: Olongapo, Philippines</li>
+          <li>Strengths: Critical thinking, Technical problem‑solving, Enthusiasm, Multi-tasking</li>
+          <li>Interests: Traditional Arts, Music, Technology</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section alt">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="chip-list">
+        <li>Communication</li>
+        <li>Account management</li>
+        <li>RDP Troubleshooting</li>
+        <li>Basic Coding</li>
+        <li>Software maintenance</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Professional Setup & WFH Readiness -->
+  <section id="setup" class="section">
+    <div class="container">
+      <h2>Professional Setup &amp; WFH Readiness</h2>
+      <div class="cards-grid-2">
+        <article class="card reveal tilt">
+          <h3>Professional Setup</h3>
+          <dl class="specs">
+            <div class="spec"><dt>CPU</dt><dd>AMD Ryzen 5 7600</dd></div>
+            <div class="spec"><dt>Motherboard</dt><dd>MSI B650M Gaming Plus WiFi</dd></div>
+            <div class="spec"><dt>Memory</dt><dd>Kingston Fury Beast 16 GB DDR5 5200 MHz</dd></div>
+            <div class="spec"><dt>Storage</dt><dd>Lexar NM620 512 GB NVMe (M.2), Lexar NM790 1 TB NVMe (M.2)</dd></div>
+            <div class="spec"><dt>Monitor</dt><dd>32” Ultra‑wide</dd></div>
+            <div class="spec"><dt>Peripherals</dt><dd>Headset + microphone</dd></div>
+            <div class="spec"><dt>Connectivity</dt><dd>Wi‑Fi (board‑integrated)</dd></div>
+          </dl>
+        </article>
+
+        <article class="card reveal tilt">
+          <h3>WFH Readiness</h3>
+          <ul class="list-check">
+            <li>Reliable high‑speed internet connection</li>
+            <li>Dedicated, quiet home workspace</li>
+            <li>Personal computer with headset</li>
+            <li>Comfortable with remote collaboration &amp; support tools</li>
+            <li>Flexible hours across time zones</li>
+          </ul>
+          <p class="muted small">Time zone: <strong>Philippines (UTC +8:00)</strong> — I can adapt my schedule to any time zone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Work Project</h2>
+      <div class="cards">
+
+        <!-- Project 1 -->
+        <article class="project-card flip tilt">
+          <div class="card-inner">
+            <div class="card-face front" style="background-image:url('images/projects/Caret.png')">
+              <div class="card-overlay">
+              </div>
+            </div>
+            <div class="card-face back" style="background-image:url('images/projects/AbacusNext.png')">
+              <div class="card-overlay scrollable">
+                <h3>Abacus Private Cloud by Caret</h3>
+                <p>I assist clients through calls and emails, troubleshooting connection, application, and latency issues in cloud server environments. I also handle after-hours software updates and maintenance to ensure seamless business operations.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card flip tilt">
+          <div class="card-inner">
+            <div class="card-face front" style="background-image:url('images/projects/wellcare-logo.png')">
+              <div class="card-overlay">
+              </div>
+            </div>
+            <div class="card-face back" style="background-image:url('images/projects/wellcare.png')">
+              <div class="card-overlay scrollable">
+                <h3>Wellcare - Provider Services</h3>
+                <p>I support doctors and nurses across the U.S., assisting with claims status and verifying HMO/PPO eligibility for patient members.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="section alt">
+    <div class="container">
+      <h2>Support Tip of the Day</h2>
+      <div class="tip-card" aria-live="polite">
+        <p id="tipText">Loading tip…</p>
+        <div class="tip-controls">
+          <button class="btn btn--ghost" id="prevTip" aria-label="Previous tip">← Prev</button>
+          <button class="btn btn--primary" id="nextTip" aria-label="Next tip">Next tip →</button>
+          <span class="tip-count" id="tipCounter" aria-hidden="true"></span>
+        </div>
+        <small class="tip-note">Daily nuggets: professional, punchy, and a dash of humor—because good support can smile.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you’d like to collaborate or just say hi, I’d love to hear from you.</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:chrisdenofficial24@gmail.com">chrisdenofficial24@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/chrisden-lorenz-cristobal-4b0492249" target="_blank" rel="noopener">LinkedIn/ChrisdenOfficial</a></li>
+        <li>GitHub: <a href="https://github.com/ChrisdenOfficial" target="_blank" rel="noopener">GitHub/ChrisdenOfficial</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/nedsirhc.znerol" target="_blank" rel="noopener">Facebook/ChrisdenOfficial</a></li>
+       <li class="tz-line">
+          Time zone:
+          <button id="tzToggle" class="tz-toggle" aria-pressed="false" title="Click to toggle 12/24-hour clock">
+            <strong>Philippines (UTC +8:00)</strong>
+          </button>
+          <span id="phTime" class="tz-time" aria-live="polite">— Local time loading…</span>
+          <span class="tz-note">— I can adapt my schedule to any time zone.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Chrisden Cristobal</small>
+      <nav aria-label="Footer"><a href="#home">Top ↑</a></nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
